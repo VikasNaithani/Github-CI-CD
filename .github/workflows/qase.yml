@@ -29,6 +29,9 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
       - uses: cskmnrpt/qase-link-run@v2
         env:
           QASE_TESTOPS_API_TOKEN: ${{ env.QASE_TESTOPS_API_TOKEN }}
