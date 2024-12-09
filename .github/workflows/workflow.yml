@@ -1,8 +1,9 @@
 name: Github to Qase
+
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   install_and_test:
@@ -11,10 +12,12 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+
       - name: Install dependencies
         run: |
           npm install
