@@ -1,0 +1,41 @@
+name: CI Workflow
+
+# Trigger the workflow on push and pull requests to the main branch
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      # Set up Node.js environment (change version as needed)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Example: Node.js version 16
+      
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+        
+      # Run tests
+      - name: Run tests
+        run: npm test
+        
+      # Build the project (if applicable)
+      - name: Build project
+        run: npm run build
+
+      # Optionally, you can deploy your app or upload artifacts
+      # - name: Deploy to Production
+      #   run: your_deployment_script.sh
