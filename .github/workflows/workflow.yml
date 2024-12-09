@@ -2,7 +2,7 @@ name: Github to Qase
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   install_and_test:
