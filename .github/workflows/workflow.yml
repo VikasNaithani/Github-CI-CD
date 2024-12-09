@@ -34,7 +34,7 @@ jobs:
       matrix:
         node-version: [16.x]
     steps:
-      - uses: qase-tms/qase-link-run@main
+      - uses: qase-tms/qase-link-run@master
         env:
           QASE_API_TOKEN: ${{ env.QASE_API_TOKEN }}
       - uses: actions/checkout@v3
