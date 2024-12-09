@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -11,10 +11,10 @@
   "description": "",
   "dependencies": {
     "@playwright/test": "^1.49.0",
-    "playwright": "^1.49.0",
     "qase-javascript-commons": "^2.2.7"
   },
   "devDependencies": {
+    "playwright": "^1.49.0",
     "playwright-qase-reporter": "^2.0.16"
   }
 }
