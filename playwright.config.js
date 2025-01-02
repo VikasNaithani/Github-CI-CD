@@ -10,10 +10,6 @@ const config = {
         {
           debug: true,
           testops: {
-            api: {
-              token: '',
-            },
-            project: '',
             uploadAttachments: true,
             run: {
               complete: true,
