@@ -57,4 +57,4 @@ jobs:
 
       - name: Run Playwright tests
         run: |
-          npm test
+          npm playwright test
