@@ -18,6 +18,7 @@ on:
         description: 'Qase Run autocomplete'
         required: true
 env:
+  
   QASE_TESTOPS_PROJECT: ${{ inputs.qase_project_code }}
   QASE_TESTOPS_RUN_ID: ${{ inputs.qase_run_id }}
   QASE_TESTOPS_RUN_COMPLETE: true
@@ -28,8 +29,6 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: cskmnrpt/qase-link-run@v2
-
       - name: Checkout code
         uses: actions/checkout@v3
     
