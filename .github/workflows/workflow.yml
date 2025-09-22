@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: cskmnrpt/qase-link-run@v2
       
       - name: Check out the repository
         uses: actions/checkout@v3
@@ -27,7 +26,6 @@ jobs:
           
       - name: Run Playwright tests
         env:
-          QASE_API_BASE_URL: ${{ inputs.qase_api_base_url }}
           QASE_TESTOPS_API_TOKEN: ${{ secrets.QASE_TESTOPS_API_TOKEN }}
           QASE_TESTOPS_PROJECT: ${{ secrets.QASE_TESTOPS_PROJECT }}
           QASE_MODE: "testops"
