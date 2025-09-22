@@ -24,6 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
+          
       - name: Run Playwright tests
         env:
           QASE_API_BASE_URL: ${{ inputs.qase_api_base_url }}
