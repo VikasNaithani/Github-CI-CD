@@ -10,14 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
       - name: Run All Qase Tests
         uses: qase-tms/qase-cloud-ci-integrations/github@v1
         with:
           project_code: 'AI'
           api_token: ${{ secrets.QASE_API_TOKEN }}
-          run_title: 'GitHub Actions Run - All Tests'
+          run_title: 'GitHub Actions Run'
           case_ids: '1'
           browser: 'chromium'
