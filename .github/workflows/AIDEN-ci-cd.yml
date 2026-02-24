@@ -3,7 +3,7 @@ name: Run All Qase Tests
 on:
   push:
     branches:
-      - main 
+      - master 
 
 jobs:
   run-qase-tests:
