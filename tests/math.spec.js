@@ -10,7 +10,7 @@ test.describe('Math module', () => {
   });
 
   test('should correctly subtract two numbers', () => {
-    expect(math.subtract(5, 3)).toBe(2);
+    expect(math.subtract(4, 3)).toBe(2);
   });
   test('[Failed Step Demo]Addition with steps', async () => {
     await test.step('Start by Adding Number 1', async () => {
