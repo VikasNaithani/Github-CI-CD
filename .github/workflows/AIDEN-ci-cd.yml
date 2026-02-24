@@ -1,20 +1,24 @@
-name: Run All Qase Tests
+name: Qase Test Run
 
 on:
   push:
-    branches:
-      - master 
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  run-qase-tests:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Run All Qase Tests
+      - uses: actions/checkout@v3
+
+      # Your build and setup steps here
+
+      - name: Run Qase Tests
         uses: qase-tms/qase-cloud-ci-integrations/github@v1
         with:
           project_code: 'AI'
           api_token: ${{ secrets.QASE_API_TOKEN }}
           run_title: 'GitHub Actions Run'
           case_ids: '1'
-          browser: 'chromium'
+        
